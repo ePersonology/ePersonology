@@ -1,0 +1,31 @@
+databaseChangeLog:
+- changeSet:
+    id: 2018-04-19-schema
+    author: ePersonology
+    changes:
+
+    - createTable:
+        tableName: users
+        columns:
+        - column:
+            name: user_id
+            type: VARCHAR(40)
+            constraints:
+              nullable: false
+        - column:
+            name: password
+            type: VARCHAR(256)
+        - column:
+            name: full_name
+            type: VARCHAR(256)
+        - column:
+            name: email
+            type: VARCHAR(256)
+        - column:
+            name: roles
+            type: VARCHAR(256)
+
+    - addPrimaryKey:
+        tableName: users
+        columnNames: user_id
+        constraintName: pk_users

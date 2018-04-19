@@ -1,0 +1,43 @@
+databaseChangeLog:
+- changeSet:
+    id: 2018-04-19-data
+    author: ePersonology
+    changes:
+
+    - insert:
+        tableName: users
+        columns:
+        - column:
+            name: user_id
+            value: ePersonology
+        - column:
+            name: password
+            value: '$2a$10$aUowpozAqR8GOeB7SWB9Ku8.h9VHi/7c/yaWl1isnuKoXbiut3u2O'
+        - column:
+            name: full_name
+            value: ePersonology Admin
+        - column:
+            name: email
+            value: 'ePersonology@gmail.com'
+        - column:
+            name: roles
+            value: USER,ADMIN,ACTUATOR
+
+    - insert:
+        tableName: users
+        columns:
+        - column:
+            name: user_id
+            value: test
+        - column:
+            name: password
+            value: '$2a$10$aUowpozAqR8GOeB7SWB9Ku8.h9VHi/7c/yaWl1isnuKoXbiut3u2O'
+        - column:
+            name: full_name
+            value: Test Admin
+        - column:
+            name: email
+            value: 'test@gmail.com'
+        - column:
+            name: roles
+            value: USER,PERSON

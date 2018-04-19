@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-11">
+      <div class="form-group">
+        <h4>ePersonology - Users</h4>
+      </div>
+    </div>
+    <div class="col-sm-1 pull-right">
+      <div class="form-group">
+        <a href="#!/user" data-toggle="tooltip" title="Add Record"><span class="glyphicon glyphicon-plus"></span></a>&nbsp; <a href="" ng-click="$ctrl.refresh()" data-toggle="tooltip" title="Refresh"><span
+          class="glyphicon glyphicon-repeat"
+        ></span></a>&nbsp; <a href="" ng-click="$ctrl.removeAll()" data-toggle="tooltip" title="Clear All"><span class="glyphicon glyphicon-remove-circle"></span></a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <table class="table table-bordered table-striped table-hover table-condensed">
+      <thead>
+        <tr>
+          <th>User Id</th>
+          <th>Full Name</th>
+          <th>Email</th>
+          <th>Roles</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in $ctrl.items track by $index">
+          <td><a ng-href="#!/user?id={{item.userId}}">{{item.userId}}</a></td>
+          <td>{{item.fullName}}</td>
+          <td>{{item.email}}</td>
+          <td><div data-toggle="tooltip" title="{{item.roles}}" class="truncate">{{item.roles}}</div></td>
+          <td><a ng-href="#!/user?id={{item.userId}}" data-toggle="truncate" title="Edit Record"> <span class="glyphicon glyphicon-pencil"></span></a></td>
+          <td><a href="" ng-click="$ctrl.remove(item.userId)" data-toggle="tooltip" title="Delete Record"><span class="glyphicon glyphicon-remove"></span></a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<script src="lib/material-kit/1.1.0/assets/js/material-kit.js" type="text/javascript"></script>

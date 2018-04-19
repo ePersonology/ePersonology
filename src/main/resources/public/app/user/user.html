@@ -1,0 +1,48 @@
+<div class="container">
+  <form class="form-horizontal" role="form" id="inform" name="inform">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="form-group">
+          <h4>ePersonology - User</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="form-group label-floating">
+          <label class="control-label">User Id</label> <input class="form-control" type="text" ng-model="$ctrl.item.userId" ng-if="$ctrl.ready" ng-readonly="$ctrl.saved" required autofocus />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="form-group label-floating">
+          <label class="control-label">Password</label> <input class="form-control" type="text" ng-model="$ctrl.item.password" ng-if="$ctrl.ready" required />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="form-group label-floating">
+          <label class="control-label">Full Name</label> <input class="form-control" type="text" ng-model="$ctrl.item.fullName" ng-if="$ctrl.ready" required />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="form-group label-floating">
+          <label class="control-label">Roles</label> <input class="form-control" type="text" ng-model="$ctrl.item.roles" ng-if="$ctrl.ready" required />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="form-group">
+          <button class="btn btn-info btn-sm" type="submit" ng-click="$ctrl.add(inform.$invalid)">Save</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<script src="lib/material-kit/1.1.0/assets/js/material-kit.js" type="text/javascript"></script>
